@@ -17,7 +17,7 @@ This repository and everything in it is public.
 - Every product claim must match what the current app does. Describe shipped behavior, not plans.
 - The privacy policy and support answers must match the app's actual data handling. Check with Kevin before changing either.
 - Plain, specific language. Don't add disclaimers, data-source or provider labels, or implementation details unless Kevin asks.
-- Keep exact prices and membership limits out of the homepage.
+- The homepage is a single hero: “Find your next world.” and the TestFlight button over the orbit animation, left for people to discover. Keep it that way unless Kevin asks; don't add sections, feature explanations or prices.
 
 ## Design
 
