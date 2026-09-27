@@ -5,67 +5,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0a0f1e">
-<meta name="description" content="Rate the games you’ve played, watch your library become a solar system, and fly out to find what to play next.">
-<title>GameOrbit — Your games. Your orbit.</title>
+<meta name="description" content="Rate the games you’ve played and each one becomes a world in your orbit. The worlds you’ve visited decide where you fly next.">
+<title>GameOrbit — Every game you’ve played becomes a world</title>
 <link rel="canonical" href="https://kcarter787.github.io/GameOrbit-site/">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="GameOrbit — Your games. Your orbit.">
-<meta property="og:description" content="Rate the games you’ve played, watch your library become a solar system, and fly out to find what to play next.">
+<meta property="og:site_name" content="GameOrbit">
+<meta property="og:title" content="GameOrbit — Every game you’ve played becomes a world">
+<meta property="og:description" content="Rate the games you’ve played and each one becomes a world in your orbit. The worlds you’ve visited decide where you fly next.">
 <meta property="og:url" content="https://kcarter787.github.io/GameOrbit-site/">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://kcarter787.github.io/GameOrbit-site/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GameOrbit: a star with game worlds in orbit around it.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="styles.css">
 <script src="orbit.js" defer></script>
+<script src="rate.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="bar"><a class="brand" href="index.html">GameOrbit</a><nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="community.html">Community</a></nav></header>
+<header class="bar"><a class="brand" href="index.html">GameOrbit</a><nav aria-label="Main"><a href="support.html">Support</a><a class="hide-narrow" href="privacy.html">Privacy</a><a class="button small secondary" href="https://testflight.apple.com/join/PbN9ErAu">Join the beta</a></nav></header>
 <main id="main">
 <section class="hero" aria-labelledby="title">
 <canvas id="orbit" aria-hidden="true"></canvas>
 <div class="hero-copy">
-<h1 id="title">Your games. Your orbit.</h1>
-<p class="lede">Rate the games you’ve played, watch your library become a solar system, and fly out to find what to play next.</p>
-<p class="availability">In beta for iPhone and iPad. <a href="https://testflight.apple.com/join/PbN9ErAu">Join the beta on TestFlight</a></p>
+<h1 id="title">Every game you’ve played becomes a world.</h1>
+<p class="lede">Rate what you’ve played to build your orbit. The worlds you’ve visited decide where you fly next.</p>
+<div class="cta"><a class="button" href="https://testflight.apple.com/join/PbN9ErAu">Join the TestFlight beta</a><span class="meta">For iPhone and iPad</span></div>
 </div>
 </section>
 
-<div class="loop">
-<section class="step rate" aria-labelledby="rate">
-<div>
-<h2 id="rate">Rate what you’ve played.</h2>
-<p>Give each game one to five stars for Fun, Gameplay, Art and sound, and Story. Fun sets the range and the other three place the game within it, so a game you couldn’t put down never scores like one you tolerated.</p>
-<p>Your list orders itself as you go. Keep notes, dates and platforms alongside each game.</p>
-</div>
-<figure class="device"><img src="images/rate.jpg" width="600" height="1164" alt="Rating Hades: five stars for Fun, four for Gameplay, four for Art and sound, three for Story." loading="lazy"></figure>
+<section class="section" aria-labelledby="worlds-title">
+<h2 id="worlds-title">Hades is an obsidian underworld.</h2>
+<div class="body"><p>Every game gets a world of its own, and it looks the same in your friends’ orbits as it does in yours.</p></div>
+<ul class="worlds">
+<li><figure><img src="images/worlds/hades.webp" width="480" height="480" alt="The Hades world: dark violet rock veined with glowing lava." loading="lazy"><figcaption><span class="title">Hades</span><span class="label">Obsidian underworld</span></figcaption></figure></li>
+<li><figure><img src="images/worlds/subnautica.webp" width="480" height="480" alt="The Subnautica world: deep blue ocean with turquoise shallows and drifting clouds." loading="lazy"><figcaption><span class="title">Subnautica</span><span class="label">Alien ocean</span></figcaption></figure></li>
+<li><figure><img src="images/worlds/elden-ring.webp" width="480" height="480" alt="The Elden Ring world: golden land with blue lakes and clusters of trees." loading="lazy"><figcaption><span class="title">Elden Ring</span><span class="label">Erdtree highlands</span></figcaption></figure></li>
+</ul>
 </section>
 
-<section class="step orbit" aria-labelledby="orbit-title">
+<section class="section split" aria-labelledby="fun-title">
 <div>
-<h2 id="orbit-title">Watch it become your orbit.</h2>
-<p>Every game you rank becomes a world orbiting your star. Higher-ranked games are larger worlds, and games you started earlier orbit closer.</p>
-<p>Your star takes its color from the gaming eras you love most. Each world takes its look from its game.</p>
+<h2 id="fun-title">Fun outranks everything.</h2>
+<div class="body">
+<p>Rate Fun, Gameplay, Art and sound, and Story from one to five stars. Fun sets the range, and the other three place the game within it.</p>
+<p>Five stars for Fun and one for everything else scores 8.5. Four for Fun and five for everything else scores 8.4. A game you couldn’t put down always ranks above one you only admired.</p>
 </div>
-<figure class="device"><img src="images/orbit.jpg" width="600" height="1115" alt="My Orbit: a glowing star with several game worlds circling it." loading="lazy"></figure>
+</div>
+<form class="rater" id="rater" aria-label="Try the rating">
+<svg width="0" height="0" aria-hidden="true" style="position:absolute"><symbol id="star" viewBox="0 0 24 24"><path d="M12 2.9l2.8 5.7 6.3.9-4.55 4.45 1.07 6.27L12 17.25l-5.62 2.97 1.07-6.27L2.9 9.5l6.3-.9z" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol></svg>
+<div class="row fun" role="radiogroup" aria-labelledby="fun-name">
+<span class="name" id="fun-name">Fun</span>
+<div class="stars"><input type="radio" name="fun" id="fun1" value="1" aria-label="1 star"><label for="fun1"><svg><use href="#star"/></svg></label><input type="radio" name="fun" id="fun2" value="2" aria-label="2 stars"><label for="fun2"><svg><use href="#star"/></svg></label><input type="radio" name="fun" id="fun3" value="3" aria-label="3 stars"><label for="fun3"><svg><use href="#star"/></svg></label><input type="radio" name="fun" id="fun4" value="4" aria-label="4 stars" checked><label for="fun4"><svg><use href="#star"/></svg></label><input type="radio" name="fun" id="fun5" value="5" aria-label="5 stars"><label for="fun5"><svg><use href="#star"/></svg></label></div>
+<span class="level" data-level="fun">Loved playing it</span>
+</div>
+<div class="row gameplay" role="radiogroup" aria-labelledby="gameplay-name">
+<span class="name" id="gameplay-name">Gameplay</span>
+<div class="stars"><input type="radio" name="gameplay" id="gameplay1" value="1" aria-label="1 star"><label for="gameplay1"><svg><use href="#star"/></svg></label><input type="radio" name="gameplay" id="gameplay2" value="2" aria-label="2 stars"><label for="gameplay2"><svg><use href="#star"/></svg></label><input type="radio" name="gameplay" id="gameplay3" value="3" aria-label="3 stars"><label for="gameplay3"><svg><use href="#star"/></svg></label><input type="radio" name="gameplay" id="gameplay4" value="4" aria-label="4 stars"><label for="gameplay4"><svg><use href="#star"/></svg></label><input type="radio" name="gameplay" id="gameplay5" value="5" aria-label="5 stars" checked><label for="gameplay5"><svg><use href="#star"/></svg></label></div>
+<span class="level" data-level="gameplay">Masterful</span>
+</div>
+<div class="row art" role="radiogroup" aria-labelledby="art-name">
+<span class="name" id="art-name">Art and sound</span>
+<div class="stars"><input type="radio" name="art" id="art1" value="1" aria-label="1 star"><label for="art1"><svg><use href="#star"/></svg></label><input type="radio" name="art" id="art2" value="2" aria-label="2 stars"><label for="art2"><svg><use href="#star"/></svg></label><input type="radio" name="art" id="art3" value="3" aria-label="3 stars"><label for="art3"><svg><use href="#star"/></svg></label><input type="radio" name="art" id="art4" value="4" aria-label="4 stars"><label for="art4"><svg><use href="#star"/></svg></label><input type="radio" name="art" id="art5" value="5" aria-label="5 stars" checked><label for="art5"><svg><use href="#star"/></svg></label></div>
+<span class="level" data-level="art">Iconic</span>
+</div>
+<div class="row story" role="radiogroup" aria-labelledby="story-name">
+<span class="name" id="story-name">Story</span>
+<div class="stars"><input type="radio" name="story" id="story1" value="1" aria-label="1 star"><label for="story1"><svg><use href="#star"/></svg></label><input type="radio" name="story" id="story2" value="2" aria-label="2 stars"><label for="story2"><svg><use href="#star"/></svg></label><input type="radio" name="story" id="story3" value="3" aria-label="3 stars"><label for="story3"><svg><use href="#star"/></svg></label><input type="radio" name="story" id="story4" value="4" aria-label="4 stars"><label for="story4"><svg><use href="#star"/></svg></label><input type="radio" name="story" id="story5" value="5" aria-label="5 stars" checked><label for="story5"><svg><use href="#star"/></svg></label></div>
+<span class="level" data-level="story">Unforgettable</span>
+</div>
+<div class="result">
+<output class="score t4" id="score">8.4</output>
+<div class="range" aria-hidden="true">
+<div class="head"><span>Fun sets the range</span></div>
+<div class="segments"><span></span><span></span><span></span><span class="on"></span><span></span></div>
+<div class="scale"><span style="left:0">0</span><span style="left:20%">4.0</span><span style="left:40%">5.5</span><span style="left:60%">7.0</span><span style="left:80%">8.5</span><span style="left:100%">10</span></div>
+<div class="track"><i class="g" style="width:33.333%"></i><i class="a" style="width:33.333%"></i><i class="s" style="width:33.333%"></i><b style="left:100%"></b></div>
+<div class="ends"><span id="low">7.0</span><span id="high">8.4</span></div>
+</div>
+</div>
+<p class="sr" id="summary" aria-live="polite"></p>
+</form>
 </section>
 
-<section class="step discover" aria-labelledby="discover">
+<section class="section split media-first" aria-labelledby="orbit-title">
 <div>
-<h2 id="discover">Fly out for the next one.</h2>
-<p>Launch a discovery flight and your pilot visits up to five games picked for your taste, each with a briefing, trailers and your predicted score. Save the ones you want to play and pass on the rest.</p>
-<p>You’ll see which friends have been there before you. Two flights a day are free.</p>
+<h2 id="orbit-title">Bigger means better. Closer means earlier.</h2>
+<div class="body">
+<p>The higher you rank a game, the bigger its world. The earlier you started playing it, the closer it orbits your star.</p>
+<p>Your star takes its color from the gaming eras you love most.</p>
 </div>
-<figure class="device"><img src="images/discover.jpg" width="600" height="789" alt="The Discover launch card: a ship with a cat pilot leaving a violet star, with the Explore new worlds button." loading="lazy"></figure>
+</div>
+<figure class="plate orbit"><img src="images/orbit.webp" width="1000" height="1000" alt="A player’s orbit: a pale blue star circled by fifteen game worlds of different sizes, colors and distances." loading="lazy"></figure>
 </section>
+
+<section class="section split" aria-labelledby="flight-title">
+<div>
+<h2 id="flight-title">Where you’ve been decides where you fly next.</h2>
+<div class="body">
+<p>Discovery flights look past genre. They follow the mechanics and studios behind the games you rated highly, and steer away from what you didn’t enjoy. A few picks will stretch your taste on purpose.</p>
+<p>Each flight visits up to five worlds. Friends who scored one are already in orbit when you arrive, and their scores shape your picks when their taste lines up with yours.</p>
 </div>
+</div>
+<figure class="plate flight"><img src="images/flight.webp" width="910" height="480" alt="A world on a discovery flight, with three friends’ ships in orbit around it." loading="lazy"></figure>
+</section>
 
 <div class="coda">
-<section aria-labelledby="friends">
-<h2 id="friends">Better with friends.</h2>
-<p>Add friends by handle or friend code. You’ll see each other’s scores and any notes you choose to share, and their ratings sharpen your recommendations. Invite friends to earn the Hamster and Penguin pilots.</p>
-</section>
-<section aria-labelledby="private">
-<h2 id="private">Private where it matters.</h2>
-<p>Notes, tags and play dates stay yours unless you share a note, and you decide who sees your profile. <a href="privacy.html">Read the privacy policy</a>.</p>
+<div class="notes">
+<section aria-labelledby="friends"><h3 id="friends">Friends</h3><p>Add friends by handle or friend code to see their scores and the notes they choose to share.</p></section>
+<section aria-labelledby="privacy"><h3 id="privacy">Privacy</h3><p>Notes, tags and play dates stay private unless you share a note, and you choose who sees your profile. <a href="privacy.html">Privacy policy</a></p></section>
+</div>
+<section class="closing" aria-labelledby="closing-title">
+<h2 id="closing-title">GameOrbit is in beta on iPhone and iPad.</h2>
+<div class="cta"><a class="button" href="https://testflight.apple.com/join/PbN9ErAu">Join the TestFlight beta</a><a class="button secondary" href="support.html">Questions and answers</a></div>
 </section>
 </div>
 </main>
