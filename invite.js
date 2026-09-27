@@ -2,7 +2,8 @@
 (() => {
   const params = new URLSearchParams(window.location.search);
   const code = params.get('code');
-  const valid = params.size === 1 && /^(?:[A-HJ-NP-Z2-9]{6}|123456|ABC123)$/.test(code ?? "");
+  // Shape check only, so the code is safe to show and pass to the app. The app decides validity.
+  const valid = params.size === 1 && /^[A-Z0-9]{6}$/.test(code ?? "");
   document.getElementById(valid ? 'invitation' : 'invalid').hidden = false;
   if (!valid) return;
   document.getElementById('code').textContent = code;
