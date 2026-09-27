@@ -3,62 +3,142 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="How GameOrbit handles your private library, profile, sharing, and account data.">
-<title>Privacy — GameOrbit</title>
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0f1e">
+<meta name="description" content="What GameOrbit collects, who can see it, and how to delete it.">
+<title>Privacy policy — GameOrbit</title>
 <link rel="canonical" href="https://kcarter787.github.io/GameOrbit-site/privacy.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Privacy — GameOrbit">
-<meta property="og:description" content="How GameOrbit handles your private library, profile, sharing, and account data.">
+<meta property="og:title" content="Privacy policy — GameOrbit">
+<meta property="og:description" content="What GameOrbit collects, who can see it, and how to delete it.">
 <meta property="og:url" content="https://kcarter787.github.io/GameOrbit-site/privacy.html">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header><a class="brand" href="index.html">GameOrbit</a><nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="community.html">Community</a></nav></header>
-<main>
-<article class="prose">
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><a class="brand" href="index.html">GameOrbit</a><nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a><a href="community.html">Community</a></nav></header>
+<main id="main" class="page">
+<div class="page-head">
 <h1>Privacy policy</h1>
-<p>Updated September 24, 2026. GameOrbit and this website are operated by Kevin Carter. For privacy questions or requests, email <a href="mailto:kevin.carter787@gmail.com">kevin.carter787@gmail.com</a>.</p>
-<h2>Your library and account</h2>
-<p>GameOrbit stores your profile, games, rankings, dates, platforms, tags, notes, collections, preferences, and saved insights on your device. Sign-in with Apple or Google is required before setup. Device backups may also contain this information.</p>
-<p>Signing in saves your account library privately and syncs it across devices. Saved insights can include report commentary you write; analytics do not automatically include journal notes. Current played games, ranks, and scores follow your profile audience; notes remain private unless explicitly shared. Conflicting changes may need your review, and recovery copies can preserve earlier data.</p>
-<p>We process your account identifier, email address (including an Apple private relay address), and basic identity information from the sign-in option you use. Available sign-in providers authenticate under their own policies. We request identity information, not your address book or messages. Session credentials are kept in the device Keychain. The app does not retain Google API tokens.</p>
-<h2>Your profile and shared entries</h2>
-<p>Your profile contains your name, handle, bio, pilot, platforms, and a star spectrum with your played games, their release years, ranks, and scores. Profiles start <strong>Public</strong> and can be accessed without signing in. In Edit profile, choose <strong>Friends</strong> (people whose friend requests you have accepted, or who have accepted yours) or <strong>Only me</strong>. Blocks and moderation also restrict access. The spectrum and game list reflect your saved library. Your chosen audience can see the ranks and scores in that list. Journal notes, personal tags, and play dates are not included.</p>
-<p>Sharing a note creates a copy of that note and its spoiler setting for your profile audience. Later private note edits do not update the shared text until you explicitly share again. Making a note private removes that copy. Profile visibility and blocks also govern shared notes and activity. Personal tags and play dates stay private. Copies someone has already saved cannot be recalled.</p>
-<p>We store friend requests, friendships, likes, blocks, and reports to provide social features and prevent abuse. Reports are visible to the moderation team and reporter, not the reported player.</p>
-<h2>Recommendations, insights, and discovery</h2>
-<p>Your rankings and game preferences support recommendations and personal insights. Current recommendation calculations run on your device. Private notes are excluded from server recommendation inputs. Predicted scores are estimates, not ratings you have given. Friend averages use current scores from accepted friends whose profile audience admits you. Community averages use current scores from Public profiles.</p>
-<p>For signed-in discovery flights, we store your account ID, a random flight ID, and the reveal time to enforce allowances and avoid counting retries twice. Older flight records are removed when you next check or use discovery after they fall outside the recent retention window of seven days before the current UTC day. They are also removed when the account is deleted.</p>
-<h2>Optional setup answers</h2>
-<p>You can skip platform selection and the first game during setup. Gaming familiarity, weekly playtime, and platforms help personalize the app. Previously collected discovery-channel answers help us understand how people find GameOrbit and do not affect recommendations. Unfinished setup progress is kept on your device; completed answers save to your account library.</p>
-<p>You can edit platforms in Edit profile. Previously collected familiarity and playtime answers remain in your private account library. Familiarity, playtime, and discovery-channel answers are not added to your public profile. Profile platforms follow your chosen audience. No third-party onboarding analytics SDK is included.</p>
-<h2>Optional Steam connection</h2>
-<p>When importing is available and you choose to connect, Steam verifies your account on its own sign-in page. We receive your Steam account ID and read the games and playtime Steam makes visible. We never receive your Steam password or override its privacy settings. Unconfirmed import data expires after 24 hours and is removed by scheduled cleanup.</p>
-<p>Only games you confirm enter your journal, without inferred ratings, notes, completion dates, or played platforms. Their Steam identifiers and observed playtime are saved privately, separately from rankings; playtime does not currently change recommendation weighting. Disconnecting removes the link, pending imports, and retained Steam activity, while confirmed journal entries remain. Deleting the synced library or account also removes that Steam activity. Minimal import receipts support safe retries.</p>
-<h2>Memberships and invitations</h2>
-<p>Apple handles membership payments; we do not receive payment-card details. The app checks purchase and renewal status to provide membership features. For paid server features, Apple’s signed membership confirmation is sent to our service and checked with Apple. These confirmations are processed transiently, not stored in your library or backups. Membership follows the Apple Account used to purchase it. Deleting your GameOrbit account does not cancel an Apple subscription.</p>
-<p>Confirming an invite code records the inviter separately from friendship. A friend request requires acceptance before either person gains Friends-only access. For invite rewards, we record whether a qualifying first game was saved, without showing the game or its notes to the inviter. The inviter can see your name, handle, and whether the invite is pending, successful, or closed. Authorized administration can review attribution and abuse. Invite links contain an identifier, not a sign-in credential. We do not upload contacts or send invitations automatically.</p>
-<p>Deleting an account removes identifying invite activity and its account-bound rewards and links. Anonymous credit may remain so another player keeps a legitimately earned reward.</p>
-<h2>Providers and technical information</h2>
-<p>Supabase hosts authentication, the database, and server functions. Our primary database is in Oregon, United States. Apple and Google provide sign-in. Game searches and metadata requests pass through our server to IGDB/Twitch; Steam supplies some game media. Images and trailers load from their media hosts. GitHub Pages hosts this website.</p>
-<p>These providers receive technical information needed to deliver and secure requests, such as IP addresses and request metadata. GitHub Pages logs visitor IP addresses for security. Processing and operational logs may occur in other locations under provider policies.</p>
-<p>Catalog searches use shared result caches indexed by a hashed query, without an account identifier. Cached results expire after 15 minutes; expired records are removed during later cache writes. A random identifier created for each app service session and request counts enforce catalog limits. These limits use minute and daily windows, with expired records removed on later requests. They are separate from your account and journal.</p>
-<p>We use information to operate and personalize GameOrbit, secure accounts, answer support requests, and moderate shared content. We do not sell personal information. GameOrbit contains no advertising or cross-app tracking SDKs.</p>
-<p>Account data is encrypted in transit and at rest by the hosting provider; it is not end-to-end encrypted. Private library access is restricted to your account and authorized service administration. Local libraries use device file protection.</p>
-<h2>Retention and deletion</h2>
-<p>Local data remains until you erase it or remove the app, subject to system backups. Account data remains while the account exists unless you remove it. Recovery copies held for support are separate from the active synced library. Restoring an earlier library changes the account data that other devices receive.</p>
-
-<p><strong>Delete account</strong> removes the account, profile, published entries, relationships, private library, sync receipts, earlier cloud backups, and that account’s active workspace on the device used for deletion. Other accounts and guest libraries are unchanged. Apple-linked accounts require confirmation with Apple so we can revoke authorization; the revocation credentials are processed transiently.</p>
-<p>Signing out removes a fully synced active account workspace. Unsynced changes remain protected and hidden for that account until you sign in again. Older migration and recovery files can remain in protected app storage; removing the app clears that storage. Offline devices cannot be remotely erased while offline. System backups and exports remain under your control.</p>
-<p>Reports made by other players may remain with the deleted account reference removed. Support and moderation records are kept as needed to resolve requests and protect the service. Provider logs and backups may remain temporarily under the providers’ retention settings.</p>
-<h2>Your choices</h2>
-<p>You can choose your profile audience, share or unshare individual notes, manage friendships, block players, and delete your account in Settings. Contact support to request a copy of your data or help with recovery. Applicable personal-data requests remain free.</p>
-<p>Contact <a href="support.html">support</a> for access, correction, deletion, or a copy of your data. We may verify account ownership. Your rights may vary by location.</p>
-<h2>Children and updates</h2>
-<p>The online service is not directed to children under 13, and we do not knowingly collect their account information. Contact us if you believe a child has provided information. We will update this policy when our practices change and give appropriate notice of material changes.</p>
+<p class="meta">Effective September 26, 2026</p>
+<p class="lede">GameOrbit is an app for rating, organizing and discovering video games. It is made and run by Kevin Carter, an independent developer (“we” in this policy). This policy covers the GameOrbit app and this website. Questions and requests go to <a href="mailto:gameorbit.support@gmail.com">gameorbit.support@gmail.com</a>.</p>
+</div>
+<section class="summary" aria-labelledby="short">
+<h2 id="short">The short version</h2>
+<ul>
+<li>You sign in with Apple or Google. We get your account ID, email address and name from them, nothing else.</li>
+<li>Your games, ratings and journal are stored on your device and synced to your account so they follow you between devices.</li>
+<li>Your profile shows your ranked games and scores to the audience you choose. Notes, tags and play dates stay private unless you share a note.</li>
+<li>Recommendations use your ratings and your friends’ shared scores. They never use your notes.</li>
+<li>No ads, no tracking, no analytics tools, and we never sell your data.</li>
+<li>You can delete your account and its data from Settings at any time.</li>
+</ul>
+</section>
+<div class="with-toc">
+<nav class="toc" aria-label="On this page"><p>On this page</p><ol>
+<li><a href="#collect">What we collect and why</a></li>
+<li><a href="#dont">What we don’t do</a></li>
+<li><a href="#visibility">Who can see what</a></li>
+<li><a href="#providers">Service providers</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#retention">Keeping and deleting data</a></li>
+<li><a href="#rights">Your choices and rights</a></li>
+<li><a href="#children">Children</a></li>
+<li><a href="#changes">Changes to this policy</a></li>
+</ol></nav>
+<article class="prose">
+<section aria-labelledby="collect">
+<h2 id="collect">What we collect and why</h2>
+<h3>Your account</h3>
+<p>You must sign in with Apple or Google to use GameOrbit. From that sign-in we receive an account identifier, your email address (which may be an Apple private relay address) and your name. We use them to create your account, keep it secure and answer support requests. We don’t receive your Apple or Google password and don’t keep Google access tokens. Your GameOrbit session is stored in your device’s Keychain.</p>
+<h3>Your library</h3>
+<p>Everything you record about your games: which games you have, their status (want to play, playing, played), your Fun, Gameplay, Art and sound, and Story ratings, the scores and ranks that result, play dates, platforms, tags, notes, collections, preferences and saved insights. It also includes your answers to optional setup questions, such as your platforms and how much you play.</p>
+<p>Your library is stored on your device and synced privately to your account. We use it to run the app and to personalize your recommendations.</p>
+<h3>Your profile</h3>
+<p>Your name, handle, bio, pilot, platforms and a summary of your taste (your star spectrum), together with the games you have played, their ranks and scores. Who can see it is up to you; see <a href="#visibility">who can see what</a>.</p>
+<h3>Friends and community</h3>
+<p>Friend requests and friendships, notes you share, likes, blocks and reports. If you join through a friend’s invite, we record who invited you and whether you have saved a first game, so they can earn invite rewards. They see your name, handle and the invite’s status, never which game you saved.</p>
+<h3>Recommendations and discovery flights</h3>
+<p>Our server predicts how much you will enjoy games you haven’t played. It reads your ratings and rankings, your favorite genres, and the published scores of friends whose profiles you are allowed to see. <strong>It never reads your notes.</strong></p>
+<p>To run discovery flights we store the flights you launch, the games each flight picked, which ones you visited, the games you marked “Not for me”, and a cache of your predicted scores. This keeps games from repeating and lets you resume a flight offline. We also record when you use a flight to enforce daily limits. Those records are removed once they are more than a week old, the next time you use Discover.</p>
+<h3>Community numbers</h3>
+<p>Game pages can show averages from friends and from players with public profiles. Trending and popular lists count activity only for games played by at least five players with public profiles, and never show who played what.</p>
+<h3>Memberships</h3>
+<p>Basic and Pro memberships are Apple subscriptions. Apple handles payment; we never see your card details. When a paid feature needs it, the app sends Apple’s signed purchase confirmation to our server, which checks it with Apple and then discards it.</p>
+<h3>Steam import (not yet available)</h3>
+<p>If this feature becomes available and you choose to connect Steam, you sign in on Steam’s own page and we receive your Steam account ID and the games and playtime Steam makes visible. We never see your Steam password. Only the games you confirm are added to your library. Unconfirmed import data expires after 24 hours. Disconnecting Steam removes the link and the Steam activity we kept; games you already added stay in your library.</p>
+<h3>Support messages</h3>
+<p>If you email us, we keep the conversation to help you and to resolve any follow-up.</p>
+<h3>Technical information</h3>
+<p>Like any online service, our providers receive technical information needed to deliver and secure requests, such as your IP address and request details. Game searches go through our server and are cached for 15 minutes under a hashed key, without your account ID. To prevent abuse, we count requests against a random identifier created each time the app starts; those counts expire within a day.</p>
+</section>
+<section aria-labelledby="dont">
+<h2 id="dont">What we don’t do</h2>
+<ul>
+<li>We don’t sell or rent your personal information.</li>
+<li>We don’t show ads or track you across other apps and websites.</li>
+<li>The app contains no advertising, analytics or crash-reporting tools from other companies.</li>
+<li>We don’t access your contacts, photos, location or messages.</li>
+<li>Public text is checked against a list of harmful words by our own service; it isn’t sent to another company for screening.</li>
+</ul>
+</section>
+<section aria-labelledby="visibility">
+<h2 id="visibility">Who can see what</h2>
+<div class="table-wrap">
+<table class="table">
+<tr><th scope="row">Only you</th><td>Notes (unless you share one), tags, play dates, collections, setup answers, saved insights, games you marked “Not for me”, and your flight history.</td></tr>
+<tr><th scope="row">Your profile audience</th><td>Your profile, the games you have played with their ranks and scores, and notes you choose to share. Profiles start <strong>Public</strong>, which means anyone can view them, even without an account. In Edit profile you can choose <strong>Friends</strong> or <strong>Only me</strong> instead.</td></tr>
+<tr><th scope="row">Friends</th><td>People who accepted your friend request, or whose request you accepted. Friends can see your score and shared note on a game during their own discovery flights.</td></tr>
+<tr><th scope="row">Moderators</th><td>Reports, and the content they refer to. A player you report never sees the report.</td></tr>
+</table>
+</div>
+<p>A shared note is a copy. Editing the private note later doesn’t change the shared copy until you share again, and making the note private removes the copy. Blocking someone hides your profiles and shared notes from each other. We can’t recall copies someone else already saved.</p>
+</section>
+<section aria-labelledby="providers">
+<h2 id="providers">Service providers</h2>
+<p>We use a small number of providers to run GameOrbit. They process data on our behalf and under their own privacy policies.</p>
+<ul>
+<li><strong>Supabase</strong> hosts accounts, the database and our server functions. The database is in Oregon, United States.</li>
+<li><strong>Apple</strong> and <strong>Google</strong> provide sign-in. Apple also provides subscriptions and app distribution.</li>
+<li><strong>IGDB (Twitch)</strong> supplies game information. Your searches reach IGDB through our server, without your account details.</li>
+<li><strong>Steam</strong> supplies some game media and store information.</li>
+<li><strong>GitHub Pages</strong> hosts this website and logs visitors’ IP addresses for security.</li>
+<li><strong>Gmail</strong> handles our support email.</li>
+</ul>
+<p>Game images and videos load directly from IGDB and Steam, so those services see your IP address when your device fetches them. Providers may process data in other countries.</p>
+</section>
+<section aria-labelledby="security">
+<h2 id="security">Security</h2>
+<p>Data is encrypted in transit and stored encrypted by our hosting provider. It isn’t end-to-end encrypted: we can access it when needed to run the service or respond to a support or legal request. Access to private libraries is limited to your account and to service administration.</p>
+</section>
+<section aria-labelledby="retention">
+<h2 id="retention">How long we keep data, and deleting it</h2>
+<p>We keep your account data for as long as you have an account. <strong>Delete account</strong> in Settings permanently removes your account, profile, shared notes, friendships, library and its earlier saved versions, recommendation and flight history, and the account’s data on the device you delete from. If you signed in with Apple, you confirm with Apple so we can revoke GameOrbit’s access.</p>
+<p>A few things can remain afterwards:</p>
+<ul>
+<li>Reports other players made about you, with your account reference removed, and moderation records we need to protect the service.</li>
+<li>Anonymous invite credit, so a friend keeps a reward they earned.</li>
+<li>Your library on other signed-in devices until they next connect, and any copies in your own device backups or exports.</li>
+<li>Provider logs, for the provider’s standard retention period.</li>
+</ul>
+<p>Signing out removes the account’s synced library from that device. Changes that haven’t synced yet are kept, hidden, until you sign in again. Deleting GameOrbit or your account doesn’t cancel an Apple subscription; manage that in your Apple Account settings.</p>
+</section>
+<section aria-labelledby="rights">
+<h2 id="rights">Your choices and rights</h2>
+<p>In the app you can change your profile audience, share or unshare notes, manage friends, block players and delete your account. Email <a href="mailto:gameorbit.support@gmail.com">gameorbit.support@gmail.com</a> to ask for a copy of your data or to correct or delete it. We may need to confirm you own the account. These requests are free. Depending on where you live, you may have additional rights, including the right to complain to your local data protection authority.</p>
+</section>
+<section aria-labelledby="children">
+<h2 id="children">Children</h2>
+<p>GameOrbit isn’t intended for children under 13, and we don’t knowingly collect their information. If you believe a child under 13 has created an account, contact us and we will delete it.</p>
+</section>
+<section aria-labelledby="changes">
+<h2 id="changes">Changes to this policy</h2>
+<p>We will update this page when our practices change and show the new effective date at the top. If a change is significant, we will give you notice before it takes effect.</p>
+</section>
 </article>
+</div>
 </main>
-<footer><span>© 2026 GameOrbit</span><nav aria-label="Footer"><a href="support.html">Contact</a><a href="privacy.html">Privacy policy</a></nav></footer>
+<footer><span>© 2026 Kevin Carter</span><nav aria-label="Footer"><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a href="community.html">Community guidelines</a></nav></footer>
 </body>
 </html>

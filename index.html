@@ -3,28 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Rank the games you play, keep a personal journal, and find your next favorite.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0a0f1e">
+<meta name="description" content="Rate the games you’ve played, watch your library become a solar system, and fly out to find what to play next.">
 <title>GameOrbit — Your games. Your orbit.</title>
 <link rel="canonical" href="https://kcarter787.github.io/GameOrbit-site/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GameOrbit — Your games. Your orbit.">
-<meta property="og:description" content="Rank the games you play, keep a personal journal, and find your next favorite.">
+<meta property="og:description" content="Rate the games you’ve played, watch your library become a solar system, and fly out to find what to play next.">
 <meta property="og:url" content="https://kcarter787.github.io/GameOrbit-site/">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="styles.css">
+<script src="orbit.js" defer></script>
 </head>
 <body>
-<header><a class="brand" href="index.html">GameOrbit</a><nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="community.html">Community</a></nav></header>
-<main>
-<h1>Your games.<br>Your orbit.</h1>
-<p class="lede">Rank the games you play, keep a personal journal, and find your next favorite.</p>
-<span class="pill">In development for iPhone and iPad</span>
-<div class="grid">
-<section class="card"><h2>Rank your games.</h2><p>A few head-to-head choices find each game’s place in your list.</p></section>
-<section class="card"><h2>Build your orbit.</h2><p>Your ranked games become worlds around your star.</p></section>
-<section class="card"><h2>Find your next favorite.</h2><p>Discover games through your taste and the friends you follow.</p></section>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar"><a class="brand" href="index.html">GameOrbit</a><nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="community.html">Community</a></nav></header>
+<main id="main">
+<section class="hero" aria-labelledby="title">
+<canvas id="orbit" aria-hidden="true"></canvas>
+<div class="hero-copy">
+<h1 id="title">Your games. Your orbit.</h1>
+<p class="lede">Rate the games you’ve played, watch your library become a solar system, and fly out to find what to play next.</p>
+<p class="availability">In beta for iPhone and iPad. <a href="https://testflight.apple.com/join/PbN9ErAu">Join the beta on TestFlight</a></p>
+</div>
+</section>
+
+<div class="loop">
+<section class="step rate" aria-labelledby="rate">
+<div>
+<h2 id="rate">Rate what you’ve played.</h2>
+<p>Give each game one to five stars for Fun, Gameplay, Art and sound, and Story. Fun sets the range and the other three place the game within it, so a game you couldn’t put down never scores like one you tolerated.</p>
+<p>Your list orders itself as you go. Keep notes, dates and platforms alongside each game.</p>
+</div>
+<figure class="device"><img src="images/rate.jpg" width="600" height="1164" alt="Rating Hades: five stars for Fun, four for Gameplay, four for Art and sound, three for Story." loading="lazy"></figure>
+</section>
+
+<section class="step orbit" aria-labelledby="orbit-title">
+<div>
+<h2 id="orbit-title">Watch it become your orbit.</h2>
+<p>Every game you rank becomes a world orbiting your star. Higher-ranked games are larger worlds, and games you started earlier orbit closer.</p>
+<p>Your star takes its color from the gaming eras you love most. Each world takes its look from its game.</p>
+</div>
+<figure class="device"><img src="images/orbit.jpg" width="600" height="1115" alt="My Orbit: a glowing star with several game worlds circling it." loading="lazy"></figure>
+</section>
+
+<section class="step discover" aria-labelledby="discover">
+<div>
+<h2 id="discover">Fly out for the next one.</h2>
+<p>Launch a discovery flight and your pilot visits up to five games picked for your taste, each with a briefing, trailers and your predicted score. Save the ones you want to play and pass on the rest.</p>
+<p>You’ll see which friends have been there before you. Two flights a day are free.</p>
+</div>
+<figure class="device"><img src="images/discover.jpg" width="600" height="789" alt="The Discover launch card: a ship with a cat pilot leaving a violet star, with the Explore new worlds button." loading="lazy"></figure>
+</section>
+</div>
+
+<div class="coda">
+<section aria-labelledby="friends">
+<h2 id="friends">Better with friends.</h2>
+<p>Add friends by handle or friend code. You’ll see each other’s scores and any notes you choose to share, and their ratings sharpen your recommendations. Invite friends to earn the Hamster and Penguin pilots.</p>
+</section>
+<section aria-labelledby="private">
+<h2 id="private">Private where it matters.</h2>
+<p>Notes, tags and play dates stay yours unless you share a note, and you decide who sees your profile. No ads, no tracking, and we never sell your data. <a href="privacy.html">Read the privacy policy</a>.</p>
+</section>
 </div>
 </main>
-<footer><span>© 2026 GameOrbit</span><nav aria-label="Footer"><a href="support.html">Contact</a><a href="privacy.html">Privacy policy</a></nav></footer>
+<footer><span>© 2026 Kevin Carter</span><nav aria-label="Footer"><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a href="community.html">Community guidelines</a></nav></footer>
 </body>
 </html>
