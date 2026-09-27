@@ -182,7 +182,8 @@
     if (!image || alpha <= 0) return;
     const drawn = r * spriteScale;
     const size = Math.max(8, Math.ceil(drawn * scale));
-    if (scratch.width < size) scratch.width = scratch.height = size;
+    // A new canvas starts at 300×150, so grow both sides; checking the width alone clipped tall worlds.
+    if (scratch.width < size || scratch.height < size) scratch.width = scratch.height = Math.max(size, scratch.width, scratch.height);
     shade.globalCompositeOperation = 'source-over';
     shade.clearRect(0, 0, scratch.width, scratch.height);
     shade.drawImage(image, 0, 0, size, size);
